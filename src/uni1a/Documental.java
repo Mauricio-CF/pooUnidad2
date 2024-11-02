@@ -3,13 +3,18 @@
  */
 package uni1a;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Subclase Documental que extiende de ContenidoAudiovisual
 public class Documental extends ContenidoAudiovisual {
     private String tema;
+    private List<Investigador>investigadores; // Composición con Investigador
 
-    public Documental(String titulo, int duracionEnMinutos, String genero, String tema) {
+    public Documental(String titulo, int duracionEnMinutos, String genero, String tema, List<Investigador> investigadores) {
         super(titulo, duracionEnMinutos, genero);
         this.tema = tema;
+        this.investigadores = investigadores;
     }
 
     public String getTema() {
@@ -19,7 +24,7 @@ public class Documental extends ContenidoAudiovisual {
     public void setTema(String tema) {
         this.tema = tema;
     }
-    
+
     @Override
     public void mostrarDetalles() {
         System.out.println("Detalles de la película:");
@@ -28,6 +33,10 @@ public class Documental extends ContenidoAudiovisual {
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Tema: " + this.tema);
+        System.out.println("Investigadores: ");
+        for (Investigador invest: investigadores){
+            System.out.println("- " + invest.getNombre());
+        }
         System.out.println();
     }
 }
