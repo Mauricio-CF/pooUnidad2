@@ -15,7 +15,7 @@ public class Podcasts extends ContenidoAudiovisual{
         this.host = host;
     }
 
-    public void agregarHots(Host hos){
+    public void agregarHost(Host hos){
         host.add(hos);
     }
     public String getDescripcion() {
