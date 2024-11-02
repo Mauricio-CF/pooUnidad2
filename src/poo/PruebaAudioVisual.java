@@ -33,12 +33,19 @@ public class PruebaAudioVisual {
         Present.add(new Presentador("Alejandra Boada"));
         Present.add(new Presentador("Milton Pérez"));
 
+
+        List<Host> host = new ArrayList<Host>();
+        host.add(new Host("Tomàs Fuente"));
+        host.add(new Host("Ignasi Taltavull"));
+
         // Crear instancias de las subclases
-        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[4];
+        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[5];
         contenidos[0] = new Pelicula("Avatar", 125, "Accion", "20th Century Studios",actores);
         contenidos[1] = new SerieDeTV("Game of Thrones", 60, "Fantasy", 8, temporadas);
         contenidos[2] = new Documental("Cosmos", 45, "Science", "Astronomy",invest);
         contenidos[3] = new NoticiasDeTV("Noticiero de la Mañana", 90, "Noticias", "Teleamazonas",Present);
+        contenidos[4] = new Podcasts("La Ruina", 60, "Comedia", "se dedican a comentar, junto con un invitado al que llevan cada semana, la peor anécdota que cuente alguna de las personas que haya ido de público al programa","18-01-2023",host);
+
 
         // Mostrar los detalles de cada contenido audiovisual
         for (ContenidoAudiovisual contenido : contenidos) {

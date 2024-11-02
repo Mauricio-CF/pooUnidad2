@@ -27,6 +27,10 @@ public class SerieDeTV extends ContenidoAudiovisual {
         this.temporadas = temporadas;
     }
 
+    public void agregarTemporadas(Temporada tempo){
+        listaTemporadas.add(tempo);
+    }
+
     @Override
     public void mostrarDetalles() {
         System.out.println("Detalles de serie de tv:");

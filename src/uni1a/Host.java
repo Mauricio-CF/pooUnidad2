@@ -1,10 +1,9 @@
 package uni1a;
 
-public class Presentador {
-
+public class Host {
     private String nombre;
 
-    public Presentador(String nombre) {
+    public Host(String nombre) {
         this.nombre = nombre;
     }
 

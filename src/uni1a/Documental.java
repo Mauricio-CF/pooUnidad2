@@ -17,6 +17,10 @@ public class Documental extends ContenidoAudiovisual {
         this.investigadores = investigadores;
     }
 
+    public void agregarInvestigador(Investigador investigador){
+        investigadores.add(investigador);
+    }
+
     public String getTema() {
         return tema;
     }
@@ -27,7 +31,7 @@ public class Documental extends ContenidoAudiovisual {
 
     @Override
     public void mostrarDetalles() {
-        System.out.println("Detalles de la película:");
+        System.out.println("Detalles del Documental:");
         System.out.println("ID: " + getId());
         System.out.println("Título: " + getTitulo());
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());

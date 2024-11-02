@@ -13,6 +13,10 @@ public class NoticiasDeTV extends  ContenidoAudiovisual{
         this.presentadores = presentadores;
     }
 
+    public void agregarPresentador(Presentador presentado){
+        presentadores.add(presentado);
+    }
+
     @Override
     public void mostrarDetalles() {
         System.out.println("Detalles de las Noticias:");
